@@ -10,9 +10,47 @@
 <body>
     <h1 class="text">Room Reservation App</h1>
 
-   
+    <br>
 
-    
+    <form>
+      
+         <label for="name">Guest Name</label>
+         <input type="text" class="form-control" id="nameInput" name="name">
+
+         <label for="number">Room Number</label>
+         <input type="text" class="form-control" id="number" name="number">
+
+         <label for="date">Check-In Date</label>
+         <input type="date" class="form-control" id="dte" placeholder="mm/dd/yyyy" name="date">
+
+         <label for="date">Check-Out Date</label>
+         <input type="date" class="form-control" id="date" placeholder="mm/dd/yyyy" name="date"><br>
+
+         <button class="btn btn-primary" onclick="addNewReservation()">Add Reservation</button>
+
+      
+    </form><br>
+
+    <h2>Reservations</h2><br>
+
+    <table class="table table-hover" id="Guest">
+        <thead>
+            <tr>
+            <th>Guest Name</th>
+            <th>Room Number</th>
+            <th>Check-In Date</th>
+            <th>Check-Out Date</th>
+            <th>Actions</th>
+            </tr>
+
+            <tr id="taskList">
+
+
+            </tr>
+        </thead>
+
+    </table>
+
 
     <script src="ROOM_RESERVATION/Reservation_App.js"></script>
 </body>
