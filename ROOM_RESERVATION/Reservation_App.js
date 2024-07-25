@@ -19,6 +19,7 @@ const addReservation = (event) => {
 
     reservations.push(reservation)
     displayReservations()
+    showAlert('Reservation Added Successfully', 'primary')
     document.getElementById('reservationForm').reset()
 
 }
@@ -43,9 +44,26 @@ const displayReservations = () => {
     })
 }
 
+//Function for remove reservation
 const deleteReservation = (index) => {
     reservations.splice(index, 1)
     displayReservations()
+    showAlert('Reservation Removed!', 'danger')
+}
+
+//Function for show alert
+const showAlert = (message, type) => {
+    const alertShow = document.getElementById('alertShow')
+    
+    const wrapper = document.createElement('div')
+    wrapper.innerHTML = `<div class="alert alert-${type}" role="alert">
+                ${message}
+                </div>`
+                alertShow.appendChild(wrapper)
+
+    setTimeout(() => {
+        wrapper.remove()
+    }, 2000)            
 }
 
 document.getElementById('reservationForm').addEventListener('submit', addReservation)
