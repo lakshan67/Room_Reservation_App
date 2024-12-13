@@ -8,11 +8,71 @@
     <link rel="stylesheet" href="Reservation.css">
 </head>
 <body>
-    <h1 class="text">Room Reservation App</h1>
+    <div class="container">
+        <h1>Room Reservation App</h1>
 
-   
+        <div id="alertShow"></div>
 
-    
+        <form id="reservationForm" class="mb-5">
+            <div class="mb-3">
+                <label class="form-label">Guest Name</label>
+                <input
+                    type="text"
+                    id="guestName"
+                    class="form-control"
+                />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Room No</label>
+                <input
+                    type="number"
+                    id="roomNumber"
+                    class="form-control"
+                />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Check In Date</label>
+                <input
+                    type="date"
+                    id="checkInDate"
+                    class="form-control"
+                />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Check Out Date</label>
+                <input
+                    type="date"
+                    id="checkOutDate"
+                    class="form-control"
+                />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Add Reservation</button>
+  
+
+        </form>
+
+        <h2>Reservation</h2>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Guest Name</th>
+                    <th>Room No</th>
+                    <th>Check In Date</th>
+                    <th>Check Out Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="reservationList">
+            </tbody>
+
+        </table>
+
+    </div>
 
     <script src="ROOM_RESERVATION/Reservation_App.js"></script>
 </body>
